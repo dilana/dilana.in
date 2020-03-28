@@ -1,0 +1,40 @@
+body {
+    .modal-open {
+        overflow: hidden;
+    }
+}
+
+.modal-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FFF;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1000000;
+
+    &.open {
+        display: block;
+    }
+
+    .modal-close {
+        padding: 20px 40px 0 0;
+
+        > i {
+            color: #f54ea2;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    }
+
+    .modal-portfolio {
+        display: none;
+
+        &.open {
+            display: block;
+        }
+    }
+}
