@@ -236,12 +236,13 @@ module.exports = function(grunt) {
         processhtml: {
             options: {
                 data: {
-                    version: '1',
+                    version: '2',
                 },
             },
             html: {
                 files: {
                     'build/index.html': ['build/index.html'],
+                    'build/bg/index.html': ['build/bg/index.html'],
                     'build/error.html': ['build/error.html'],
                 },
             },
@@ -269,5 +270,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-replace');
 
     grunt.registerTask('i18n', ['copy:bg', 'copy:en', 'replace']);
-    grunt.registerTask('build', ['sass', 'concat:css', 'postcss', 'concat:js', 'uglify', 'copy:html', 'copy:img', 'copy:fonts', 'processhtml', 'i18n', 'copy:tr_en', 'copy:tr_bg']);
+    grunt.registerTask('build', ['sass', 'concat:css', 'postcss', 'concat:js', 'uglify', 'copy:html', 'copy:img', 'copy:fonts', 'i18n', 'copy:tr_en', 'copy:tr_bg', 'processhtml']);
 };
