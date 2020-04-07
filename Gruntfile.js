@@ -164,6 +164,32 @@ module.exports = function(grunt) {
                     },
                 ],
             },
+            tr_en: {
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['index-en.html'],
+                        dest: '/',
+                        rename: function(path, name) {
+                            return 'build/index.html';
+                        },
+                    },
+                ],
+            },
+            tr_bg: {
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['index-bg.html'],
+                        dest: '/',
+                        rename: function(path, name) {
+                            return 'build/bg/index.html';
+                        },
+                    },
+                ],
+            },
         },
         replace: {
             bg: {
@@ -242,14 +268,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-replace');
 
-    grunt.registerTask('i18n', ['copy:bg', 'copy:en']);
-    grunt.registerTask('build', ['sass', 'concat:css', 'postcss', 'concat:js', 'uglify', 'copy', 'processhtml']);
-
-    // grunt.registerTask('play', ['temp', 'copy:play', 'replace:configPlay']);
-    // grunt.registerTask('usplay', ['temp', 'copy:usplay', 'replace:configUSPlay']);
-
-    // grunt.registerTask('play', ['clean', 'less:prod', 'copy:dist', 'concat', 'uglify', 'processhtml', 'replace:configDist', 'replace:sourceMaps', 'insert:dist', 'clean:clappr']);
-    // grunt.registerTask('play', ['clean', 'less:prod', 'copy:dist', 'concat', 'uglify', 'processhtml', 'replace:configDist', 'replace:sourceMaps', 'insert:dist', 'clean:clappr']);
-    // grunt.registerTask('usplay', ['play', 'copy:distUS', 'clean:dist', 'configDistUS']);
-    // grunt.registerTask('mplay', ['play', 'copy:dev', 'clean:dist', 'replace:configDev', 'replace:devPath']);
+    grunt.registerTask('i18n', ['copy:bg', 'copy:en', 'replace']);
+    grunt.registerTask('build', ['sass', 'concat:css', 'postcss', 'concat:js', 'uglify', 'copy:html', 'copy:img', 'copy:fonts', 'processhtml', 'i18n', 'copy:tr_en', 'copy:tr_bg']);
 };
