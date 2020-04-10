@@ -281,7 +281,7 @@
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  width: 33.33333%;
+  width: 25%;
   padding: 55px 30px;
 }
 .contacts-info-wrap.style5 .item-wrapper i {
@@ -290,7 +290,7 @@
 }
 .contacts-info-wrap.style5 .item-wrapper .title {
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 800;
   opacity: 1;
   letter-spacing: .2px;

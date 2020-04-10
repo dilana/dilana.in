@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .static-menu .info-block-wrap {
   width: 84%;
 }
@@ -97,9 +98,8 @@
 .info-block-wrap .content ul li:before {
   padding-right: 17px;
   color: #f54ea2;
-  font-size: 7px;
-  content: "\f0c8";
-  font-family: 'Font Awesome 5 Free';
+  font-size: 16px;
+  content: "•";
 }
 .info-block-wrap .but-wrap {
   margin-top: 53px;
