@@ -236,7 +236,7 @@ module.exports = function(grunt) {
         processhtml: {
             options: {
                 data: {
-                    version: '5',
+                    version: '6',
                 },
             },
             html: {
