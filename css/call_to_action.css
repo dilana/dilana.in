@@ -101,6 +101,7 @@
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 .call-to-action.classic .info-wrap {
   position: absolute;

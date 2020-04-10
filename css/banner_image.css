@@ -9,7 +9,7 @@
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center;
   background-color: #41218E;
   background-blend-mode: multiply;
