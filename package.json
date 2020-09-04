@@ -40,7 +40,7 @@
     "jquery-countto": "^1.2.0",
     "less-plugin-autoprefix": "^2.0.0",
     "less-plugin-clean-css": "^1.5.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "parallax-js": "^3.1.0",
     "pixrem": "^4.0.1",
     "simple-line-icons": "^2.4.1"
